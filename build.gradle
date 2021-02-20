@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.4.3'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'application'
 }
 
 group = 'com.appgate'
@@ -23,8 +24,13 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '3.0.0'
 }
 
 test {
 	useJUnitPlatform()
+}
+
+application {
+	mainClass = 'com.appgate.ipgeolocation.IpGeolocationApplication'
 }
