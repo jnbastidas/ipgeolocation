@@ -10,7 +10,6 @@ import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobParametersBuilder;
 import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,7 +22,10 @@ import com.appgate.ipgeolocation.dto.LocationDTO;
 import com.appgate.ipgeolocation.model.Localization;
 import com.appgate.ipgeolocation.service.LocalizationService;
 
+import lombok.extern.slf4j.Slf4j;
 
+
+@Slf4j
 @RestController
 @RequestMapping("/ipgeolocalization")
 public class IpGeolocalizationController {
@@ -64,6 +66,7 @@ public class IpGeolocalizationController {
 							.city(s.getCity()).timezone(s.getTimeZone()).build()).collect(Collectors.toSet())
 			);
 		} catch (final  IllegalArgumentException e){
+			log.debug("Error getLocalizations", e);
 			return ResponseEntity.badRequest().body(e.getMessage());
 		}
 	}
