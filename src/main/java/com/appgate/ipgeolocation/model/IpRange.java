@@ -4,12 +4,13 @@ import java.io.Serializable;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -32,9 +33,8 @@ public class IpRange implements Serializable {
 	private Long ipFrom;
 	private Long ipTo;
 
-	@ManyToOne(
-		fetch = FetchType.LAZY, cascade = CascadeType.ALL
-	)
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = LOCALIZATION_FIELD + "_id")
+	@JsonIgnoreProperties("ipRanges")
 	private Localization localization;
 }
