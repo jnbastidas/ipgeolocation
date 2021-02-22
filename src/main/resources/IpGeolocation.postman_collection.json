@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "9accdfb5-0286-4d2b-bed6-784d764d18cc",
+		"name": "IpGeolocation",
+		"description": "Rest clients to test ipgeolocation app services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PingPong",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ipgeolocalization",
+						"ping"
+					]
+				},
+				"description": "Test load file service"
+			},
+			"response": []
+		},
+		{
+			"name": "ProcessFile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ipgeolocalization/process-file",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ipgeolocalization",
+						"process-file"
+					]
+				},
+				"description": "Test load file service"
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultByIp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ipgeolocalization/locations/1.0.114.100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ipgeolocalization",
+						"locations",
+						"1.0.114.100"
+					]
+				},
+				"description": "Test load file service"
+			},
+			"response": []
+		}
+	]
+}
