@@ -19,8 +19,8 @@ Steps
 
 1. INSTALL ipgeolocation Application
 
-  a) Clone and download this git repository: https://github.com/jnbastidas/ipgeolocation.git (keep note of the location).
-  b) Checkout master branch.
+  a) Clone and download this git repository: https://github.com/jnbastidas/ipgeolocation.git (keep note of the location).</br>
+  b) Checkout master branch.</br>
   c) At the command line for your operating system, change your directory to where the source was downloaded, and build the project:
 
   For Windows:
