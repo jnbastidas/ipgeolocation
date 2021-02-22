@@ -6,5 +6,4 @@ import com.appgate.ipgeolocation.model.Localization;
 
 
 public interface LocalizationRepository extends JpaRepository<Localization, Long> {
-
 }
