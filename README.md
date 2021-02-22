@@ -49,7 +49,9 @@ Steps
   
   Once this has finished, you can use the url http://localhost:8080/ipgeolocalization/ping to verify the correct work, the service should response "pong"
   
-  Please use the file <a href='https://github.com/jnbastidas/ipgeolocation/blob/develop/src/main/resources/IpGeolocation.postman_collection.json'>Ipgeolocation.postman_collection.json</a> with the <a href='https://www.postman.com/'>Postman app</a> to test the endpoints.
+  Please download and import the file <a href='https://github.com/jnbastidas/ipgeolocation/blob/develop/src/main/resources/IpGeolocation.postman_collection.json'>Ipgeolocation.postman_collection.json</a> with the <a href='https://www.postman.com/'>Postman app</a> to test the endpoints.
   
+  
+  <b>Key Features and Technologies</b>
   
 
