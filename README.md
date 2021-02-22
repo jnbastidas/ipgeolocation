@@ -47,7 +47,7 @@ Steps
       » ./gradlew run
   
   
-  Once this has finished, you can use the url http://localhost:8080/ipgeolocalization/ping to verify the correct work, the service should response "pong"
+  Once this has finished, you can use the url http://localhost:8080/ping to verify the correct work, the service should response "pong"
   
   Please download and import the file <a href='https://github.com/jnbastidas/ipgeolocation/blob/develop/src/main/resources/IpGeolocation.postman_collection.json'>Ipgeolocation.postman_collection.json</a> with the <a href='https://www.postman.com/'>Postman app</a> to test the endpoints.
   
