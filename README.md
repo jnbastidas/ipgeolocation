@@ -6,7 +6,7 @@ Java app to expose a rest service that let us process a plain text file (CSV) an
 
 PREREQUISITES
 
-First, download the Java 11 Development Kit: either the official Oracle JDK or Open JDK.
+First, download the Java 11 Development Kit: either the official Oracle JDK or Open JDK.</br>
 You will also need a MySql server running.
 
 Steps
