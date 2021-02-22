@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
+import org.springframework.beans.factory.annotation.Value;
 
 import com.appgate.ipgeolocation.listener.IpGeolocalizationListener;
 import com.appgate.ipgeolocation.model.IpGeolocalizationCSVRow;
@@ -40,11 +41,14 @@ public class IpGoeBatchConfig {
 	@Autowired
 	private JobRepository jobRepository;
 
+	@Value("${csv.file.path}")
+	private String csvFilePath;
+
 	@Bean
 	public FlatFileItemReader<IpGeolocalizationCSVRow> reader() {
 		return new FlatFileItemReaderBuilder<IpGeolocalizationCSVRow>()
 				.name("ipGeolocalizationCSVRowReader")
-				.resource(new ClassPathResource("ipgeo.csv"))
+				.resource(new ClassPathResource(this.csvFilePath))
 				.delimited()
 				.names(new String[] { "ipFrom", "ipTo", "countryCode", "countryName",
 						"region", "city", "latitude", "longitude", "timeZone"})
