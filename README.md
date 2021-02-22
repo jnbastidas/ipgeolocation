@@ -54,4 +54,9 @@ Steps
   
   <b>Key Features and Technologies</b>
   
+Spring Framework: It provides numerous features, including dependency injection and transaction control.<br/>
+Spring batch: Spring modelo, lightweight, comprehensive batch framework designed to enable the development of robust batch applications.
+
+Multi-tier architecture: The modul has a persistence tier, service tier, and controller tier.
+
 
