@@ -12,7 +12,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/ipgeolocalization/ping",
+					"raw": "http://localhost:8080/ping",
 					"protocol": "http",
 					"host": [
 						"localhost"
